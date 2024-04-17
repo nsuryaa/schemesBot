@@ -1,7 +1,12 @@
 import { createClientMessage, createCustomMessage } from "react-chatbot-kit";
 import React from "react";
+import schemesData from "./schemesData.json";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
+  const genAI = new GoogleGenerativeAI(
+    "AIzaSyBy-6n17sz4uwPOODfkfY-jitanttRIdz8"
+  );
   const updateState = (message) => {
     setState((prev) => ({
       ...prev,
@@ -24,7 +29,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       updateState(message);
     }
     if (custom.length != 0) {
-      const message = createCustomMessage("hi", custom);
+      const message = createCustomMessage(botMessage, custom);
       updateState(message);
     }
   };
@@ -34,6 +39,45 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     const message = createChatBotMessage("Your city", { widget: "City" });
     updateState(message);
   };
+
+  const handleSearch = (schemeName) => {
+    const searchTerm = schemeName.toLowerCase(); // Convert search term to lowercase for case-insensitive search
+    const scheme = schemesData.find((scheme) =>
+      scheme.scheme_details.title_name.toLowerCase().includes(searchTerm)
+    );
+    setState((state) => ({ ...state, searchresult: JSON.stringify(scheme) }));
+    // handleGemini(scheme);
+    const message = createCustomMessage("hi", "SchemeCard", { loading: true });
+    updateState(message);
+  };
+
+  const handleGemini = async (scheme) => {
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+
+    const prompt = `
+    Summarize the following government scheme details in a brief  and with 5 bullet points about features:
+    Scheme Name: ${scheme.scheme_details.title_name}\n
+    Scheme Description: ${scheme.description}\n
+    Key Features:\n
+    - Beneficiaries: ${scheme.scheme_details.beneficiaries}\n
+    - Eligibility Criteria:\n
+    - Income: ${scheme.scheme_details.eligibility_criteria.income}\n
+    - Age: ${scheme.scheme_details.eligibility_criteria.age}\n
+    - Community: ${scheme.scheme_details.eligibility_criteria.community}\n
+    - Other Details: ${scheme.scheme_details.eligibility_criteria.other_details}\n
+    - How to Avail: ${scheme.how_to_avail}\n
+    - Validity of the Scheme:\n
+    - Introduced on: ${scheme.validity_of_the_scheme.introduced_on}\n
+    - Valid up to: ${scheme.validity_of_the_scheme.valid_upto}\n`;
+
+
+    const result = await model.generateContent(prompt);
+    const response = await result.response;
+    const text = response.text();
+    console.log(text);
+    setState((state) => ({ ...state, searchresult: text }));
+  };
+  
 
   const handleDb = (state) => {
     fetch("http://localhost:3001/suggest", {
@@ -68,6 +112,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
           actions: {
             handleEvent,
             handleAge,
+            handleSearch,
             // handleSuggest,
             // handleGender,
             // handleError,

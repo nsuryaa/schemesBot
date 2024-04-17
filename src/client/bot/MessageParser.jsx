@@ -1,6 +1,6 @@
 import React from "react";
-import schemesData from "./schemesData.json";
-import SchemeCard from "./SchemeCard";
+// import schemesData from "./schemesData.json";
+// import SchemeCard from "./SchemeCard";
 
 const MessageParser = ({ children, actions }) => {
   const parse = (message) => {
@@ -16,29 +16,7 @@ const MessageParser = ({ children, actions }) => {
         actions.handleEvent(null, botMessage);
       }
     } else {
-      // fetch("http://localhost:3001/search", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify({ value: message }),
-      // })
-      //   .then((response) => response.json())
-      //   .then((data) => {
-      //     console.log(data); // Handle the response data
-      //   })
-      //   .catch((error) => {
-      //     console.error("Error:", error);
-      //   });
-      let botMessage;
-      const searchTerm = message.toLowerCase(); // Convert search term to lowercase for case-insensitive search
-      const scheme = schemesData.find((scheme) =>
-        scheme.scheme_details.title_name.toLowerCase().includes(searchTerm)
-      );
-      scheme
-        ? (botMessage = `Description: ${scheme.description}<br>Benefit Types:${scheme.benefits_types}`)
-        : (botMessage = "Scheme not found");
-      actions.handleEvent(null, botMessage, null, "SchemeCard");
+      actions.handleSearch(message);
     }
   };
 
@@ -55,3 +33,28 @@ const MessageParser = ({ children, actions }) => {
 };
 
 export default MessageParser;
+
+//search code for db
+// fetch("http://localhost:3001/search", {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+//   body: JSON.stringify({ value: message }),
+// })
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log(data); // Handle the response data
+//   })
+//   .catch((error) => {
+//     console.error("Error:", error);
+//   });
+// let botMessage;
+// const searchTerm = message.toLowerCase(); // Convert search term to lowercase for case-insensitive search
+// const scheme = schemesData.find((scheme) =>
+//   scheme.scheme_details.title_name.toLowerCase().includes(searchTerm)
+// );
+// scheme
+//   ? (botMessage = `Description: ${scheme.description}Benefit Types:${scheme.benefits_types}`)
+//   : (botMessage = "Scheme not found");
+// actions.handleEvent(null, botMessage, null, "SchemeCard");
