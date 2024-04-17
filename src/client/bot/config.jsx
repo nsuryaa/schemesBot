@@ -6,6 +6,7 @@ import Community from "./Community";
 import DiffAbled from "./DiffAbled";
 import Student from "./Stundent";
 import SchemesList from "./SchemesList";
+import SchemeCard from "./SchemeCard";
 const botName = "SchemesBot";
 const config = {
   initialMessages: [
@@ -104,7 +105,7 @@ const config = {
     },
   },
   customMessages: {
-    info: (props) => <SchemesList {...props} />,
+    SchemeCard: (props) => <SchemeCard {...props} />,
   },
 };
 
