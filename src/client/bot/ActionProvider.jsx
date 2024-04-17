@@ -1,4 +1,4 @@
-import { createClientMessage } from "react-chatbot-kit";
+import { createClientMessage, createCustomMessage } from "react-chatbot-kit";
 import React from "react";
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
@@ -9,13 +9,22 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }));
   };
 
-  const handleEvent = (choice = null, botMessage = "", widget = null) => {
+  const handleEvent = (
+    choice = null,
+    botMessage = "",
+    widget = null,
+    custom = ""
+  ) => {
     if (choice != null) {
       const userMessage = createClientMessage(`Your choice: ${choice}`);
       updateState(userMessage);
     }
-    if (botMessage.length != 0) {
+    if (botMessage.length != 0 && custom.length == 0) {
       const message = createChatBotMessage(botMessage, { widget: widget });
+      updateState(message);
+    }
+    if (custom.length != 0) {
+      const message = createCustomMessage("hi", custom);
       updateState(message);
     }
   };

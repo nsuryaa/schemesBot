@@ -1,5 +1,6 @@
 import React from "react";
 import schemesData from "./schemesData.json";
+import SchemeCard from "./SchemeCard";
 
 const MessageParser = ({ children, actions }) => {
   const parse = (message) => {
@@ -37,7 +38,7 @@ const MessageParser = ({ children, actions }) => {
       scheme
         ? (botMessage = `Description: ${scheme.description}<br>Benefit Types:${scheme.benefits_types}`)
         : (botMessage = "Scheme not found");
-      actions.handleEvent(null, botMessage);
+      actions.handleEvent(null, botMessage, null, "SchemeCard");
     }
   };
 
