@@ -1,0 +1,167 @@
+.user-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px;
+  color: #000; /* Changed text color */
+  border-radius: 10px; /* Increased border-radius for a softer look */
+  box-shadow: 2px 2px 4px 6px rgba(0, 0, 0, 0.1); /* Adjusted box-shadow */
+  width: 80%; /* Adjusted width for responsiveness */
+  max-width: 500px; /* Added max-width for larger screens */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.user-profile-container .profile-name {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  background: -webkit-linear-gradient(
+    right,
+    #56d8e4,
+    #9f01ea,
+    #56d8e4,
+    #9f01ea
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.user-profile-container p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #56d8e4;
+}
+
+.user-profile-container button {
+  padding: 10px 20px;
+  background-color: #56d8e4; /* Changed button color */
+  color: #fff; /* Changed text color */
+  border: none; /* Removed border */
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-profile-container button:hover {
+  background-color: #9f01ea; /* Darker background color on hover */
+}
+
+.user-profile-container .follow-btn {
+  margin-top: 20px; /* Adjusted margin for better spacing */
+  background-color: #9f01ea; /* Changed follow button color */
+}
+
+.user-profile-container .follow-btn.secondary {
+  margin-left: 10px;
+  background: transparent;
+  color: #56d8e4; /* Changed text color */
+  border: 2px solid #56d8e4; /* Added border */
+}
+
+.user-profile-container .follow-btn.secondary:hover {
+  background: #56d8e4; /* Changed background color on hover */
+  color: #fff; /* Changed text color on hover */
+}
+
+.user-profile-container .profile-about {
+  margin-top: 20px; /* Adjusted margin for better spacing */
+  text-align: center;
+}
+
+
+/* userprofile.css */
+
+/* Container for the entire component */
+.schemes-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: red;
+  font-family: Arial, sans-serif;
+}
+
+/* Main heading */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Navigation menu */
+.main-menu {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.main-menu li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.main-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Logout button */
+.user-profile-btn {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.follow-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.follow-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Scheme items */
+.scheme-item {
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.scheme-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #f5f5f5;
+}
+
+.scheme-title h2 {
+  margin: 0;
+}
+
+.scheme-details {
+  padding: 10px;
+  background-color: #fff;
+}
+
+.scheme-details p {
+  margin-bottom: 10px;
+}
+
+/* Icon for the scheme title */
+.scheme-title svg {
+  color: #333;
+}
+
+/* Icon animation on toggle */
+.scheme-title svg.rotate {
+  transition: transform 0.3s ease-in-out;
+}
+
+.scheme-title.open svg.rotate {
+  transform: rotate(180deg);
+}

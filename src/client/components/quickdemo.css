@@ -1,0 +1,45 @@
+/* QuickDemo Component Styles */
+.quick-demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quick-demo h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: -webkit-linear-gradient(
+    right,
+    #56d8e4,
+    #9f01ea,
+    #56d8e4,
+    #9f01ea
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.quick-demo p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.quick-demo button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #eaeaea;
+}

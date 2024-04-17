@@ -1,0 +1,62 @@
+[
+  {
+    "registerNumber": "813820104000",
+    "dob": "12-09-2002",
+    "name": "Abdul",
+    "gender": "Male",
+    "age": 19,
+    "city": "Trichy",
+    "community": "BCM",
+    "differentlyAbled": false
+  },
+  {
+    "registerNumber": "813820104001",
+    "dob": "01-03-2001",
+    "name": "Sriram",
+    "gender": "Male",
+    "age": 20,
+    "city": "Ariyalur",
+    "community": "SC",
+    "differentlyAbled": true
+  },
+  {
+    "registerNumber": "813820104003",
+    "name": "Periyaram perupal",
+    "dob": "25-07-2000",
+    "gender": "Male",
+    "age": 21,
+    "city": "Thirunalveli",
+    "community": "BC",
+    "differentlyAbled": false
+  },
+  {
+    "registerNumber": "813820104004",
+    "name": "Harini",
+    "dob": "01-01-2003",
+    "gender": "Female",
+    "age": 18,
+    "city": "Chennai",
+    "community": "BC",
+    "differentlyAbled": false
+  },
+  {
+    "registerNumber": "813820104005",
+    "dob": "12-09-2002",
+    "name": "Nisha",
+    "gender": "Female",
+    "age": 19,
+    "city": "Trichy",
+    "community": "General",
+    "differentlyAbled": true
+  },
+  {
+    "registerNumber": "813820104109",
+    "dob": "11-12-2002",
+    "name": "Surya",
+    "gender": "Male",
+    "age": 22,
+    "city": "Trichy",
+    "community": "General",
+    "differentlyAbled": false
+  }
+]
