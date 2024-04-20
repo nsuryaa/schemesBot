@@ -29,7 +29,6 @@ const UserProfile = () => {
   };
 
   return (
-    
     <div className="user-profile-container">
       {userData ? (
         <div className="profile-name">{userData.name}</div>

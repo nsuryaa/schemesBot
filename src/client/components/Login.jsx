@@ -7,8 +7,7 @@ import "./login.css";
 const Login = () => {
   const navigate = useNavigate();
   const [error, setError] = useState(null);
-  const [cookies, setCookie, removeCookie] = useCookies(["access_token"]); // useCookies hook to manage cookies
-
+  const [cookies, setCookie, removeCookie] = useCookies(["access_token"]); // Use useCookies hook to manage cookies
   const handleLogin = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);

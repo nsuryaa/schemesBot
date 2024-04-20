@@ -1,4 +1,4 @@
-/* Import Google Fonts */
+/*Import Google Fonts
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 
 /* Global Styles */
@@ -10,8 +10,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-
-.A{
+.A {
   color: red;
 }
 /* Heading Styles */
@@ -52,5 +51,5 @@
 }
 
 .button:hover {
-  background-color: #f0f0f0; /* Lighten the background color on hover */
+  background-color: #f0f0f0;
 }

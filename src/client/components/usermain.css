@@ -1,0 +1,113 @@
+/* userprofile.css */
+
+/* Container for the entire schemes section */
+.schemes-container {
+  max-width: 800px; /* Adjust max-width for better responsiveness */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Main heading */
+.schemes-container h1 {
+  font-size: 28px; /* Increase font size for better emphasis */
+  margin-bottom: 30px; /* Add more spacing below the heading */
+}
+
+/* Main navigation menu */
+.main-menu {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 30px; /* Add more spacing below the navigation */
+}
+
+.main-menu li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.main-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px; /* Increase font size for better readability */
+}
+
+/* Logout button */
+.user-profile-btn {
+  text-align: right;
+  margin-bottom: 30px; /* Add more spacing below the button */
+}
+
+.follow-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 24px; /* Increase padding for better clickability */
+  font-size: 18px; /* Increase font size for better visibility */
+  cursor: pointer;
+  border-radius: 5px; /* Add border radius for a more modern look */
+  transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+.follow-btn:hover {
+  background-color: #0056b3; /* Darken the background color on hover */
+}
+
+/* Scheme list */
+.schemes-list {
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Increase border radius for a softer look */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.scheme-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.scheme-title {
+  background-color: #f9f9f9; /* Use a slightly lighter background color */
+  border: none;
+  padding: 15px 20px; /* Increase padding for better spacing */
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+.scheme-title:hover {
+  background-color: #f0f0f0; /* Darken the background color on hover */
+}
+
+.scheme-title h2 {
+  margin: 0;
+  font-size: 20px; /* Increase font size for better readability */
+  color: #333;
+}
+
+.scheme-details {
+  padding: 20px; /* Increase padding for better spacing */
+}
+
+.scheme-details p {
+  margin-top: 0;
+}
+
+.scheme-details ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.scheme-details ul li {
+  margin-bottom: 10px; /* Increase margin bottom for better separation */
+}
+
+/* FontAwesome icon */
+.scheme-title .fa-angle-down {
+  transition: transform 0.3s ease;
+}
+
+.scheme-title.active .fa-angle-down {
+  transform: rotate(180deg);
+}

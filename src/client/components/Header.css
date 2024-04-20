@@ -1,0 +1,78 @@
+/**Header CSS**/
+.landing-page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  justify-content: space-between;
+  background-color: #ffffff; /* Add a background color for better visibility */
+  z-index: 1000; /* Ensure the header appears above other content */
+}
+
+.landing-page-header a {
+  font-weight: 700;
+  color: #000000;
+}
+.header-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header-nav {
+    display: block;
+  }
+}
+.header-ul {
+  display: flex;
+  color: #ffffff;
+}
+.header-nav-two {
+  display: block;
+}
+@media (min-width: 768px) {
+  .header-nav-two {
+    display: none;
+  }
+}
+.header-ul-two {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  position: fixed;
+  left: 0;
+  top: 2.5rem;
+  width: 100%;
+  height: 25%;
+  background-color: #1f2937;
+}
+.header-button {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .header-button {
+    display: none;
+  }
+}
+.header-icon {
+  height: 1.25rem;
+  color: #ffffff;
+}
+
+.login-button {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  border-radius: 0.25rem;
+  border-color: #ffffff;
+  font-weight: 700;
+}
+.btn:hover {
+  border-width: 1;
+}
