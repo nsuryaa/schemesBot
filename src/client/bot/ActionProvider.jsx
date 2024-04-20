@@ -47,7 +47,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     );
     setState((state) => ({ ...state, searchresult: JSON.stringify(scheme) }));
     // handleGemini(scheme);
-    const message = createCustomMessage("hi", "SchemeCard", { loading: true });
+    const message = createCustomMessage("hi", "SchemeCard", { delay: 3000 });
     updateState(message);
   };
 
