@@ -7,6 +7,7 @@ import DiffAbled from "./DiffAbled";
 import Student from "./Stundent";
 import SchemesList from "./SchemesList";
 import SchemeCard from "./SchemeCard";
+import LatestSchemes from "./LatestSchemes";
 const botName = "SchemesBot";
 const config = {
   initialMessages: [
@@ -93,6 +94,10 @@ const config = {
       widgetName: "SchemesList",
       widgetFunc: (props) => <SchemesList {...props} />,
       // mapStateToProps: ["category"],
+    },
+    {
+      widgetName: "LatestSchemes",
+      widgetFunc: (props) => <LatestSchemes {...props} />,
     },
   ],
   botName: botName,

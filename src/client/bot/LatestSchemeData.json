@@ -1,0 +1,64 @@
+[
+  {
+    "SchemeName": "Tamil Nadu Pongal Gift Scheme",
+    "LaunchedDate": "05-01-2024",
+    "Benefits": ["Cash Assistance of Rs. 1,000/-", "Pongal Gift Hamper"],
+    "Beneficiaries": "Residents of Tamil Nadu",
+    "ModeOfApply": "Through Ration Shops (Fair Price Shop)"
+  },
+  {
+    "SchemeName": "Tamil Nadu Kalaignar Sports Kit Scheme",
+    "LaunchedDate": "07-02-2024",
+    "Benefits": ["Free Sports Kit will be Provided"],
+    "Beneficiaries": "Players/Students of Tamil Nadu",
+    "ModeOfApply": "Through Kalaignar Sports Kit Scheme Application Form"
+  },
+  {
+    "SchemeName": "Tamil Nadu Magalir Urimai Thogai Scheme",
+    "LaunchedOn": "15th September 2023",
+    "Benefits": ["Financial Assistance of Rs. 1,000/- per Month"],
+    "Beneficiaries": "Women of Tamil Nadu",
+    "OfficialWebsite": "Tamil Nadu Magalir Urimai Thogai Scheme Website",
+    "NodalDepartment": "Department of Social Welfare & Women Empowerment, Tamil Nadu",
+    "ModeOfApplication": "Through Tamil Nadu Magalir Urimai Thogai Scheme Application Form"
+  },
+  {
+    "SchemeName": "Tamil Nadu Chief Minister Fellowship Programme",
+    "Benefits": [
+      "Rs. 65,000/- per month as a fellowship",
+      "Rs. 10,000/- The monthly additional allowance"
+    ],
+    "Beneficiaries": "Young Professionals of Tamil Nadu",
+    "NodalDepartment": "Special Programme Implementation Department",
+    "ModeToApply": "Online Application from"
+  },
+  {
+    "SchemeName": "Tamil Nadu Makkaludan Mudhalvar Scheme",
+    "LaunchedYear": 2023,
+    "Benefits": [
+      "Beneficiary can file grievance against government services",
+      "All filed grievances will be resolved in 30 days"
+    ],
+    "Beneficiaries": "Tamil Nadu Residents",
+    "Website": "Tamil Nadu Makkaludan Mudhalvar Scheme Website",
+    "HowToApply": "By Visiting Makkaludan Mudhalvar Scheme Camp Location"
+  },
+  {
+    "SchemeName": "Moovalur Ramamirtham Ammaiyar Higher Education Assurance Scheme",
+    "Benefits": ["Financial Assistance to meet the cost of education"],
+    "Beneficiaries": "Girl Students of Tamil Nadu",
+    "AmountOfAssistance": "Rs. 1,000/- per month till the completion of the course",
+    "NodalAgency": "Department of Social Welfare and Women Empowerment, Tamil Nadu",
+    "ModeOfApply": "Through Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Application Form"
+  },
+  {
+    "SchemeName": "Tamil Nadu Chief Minister Breakfast Scheme",
+    "LaunchedDate": "15-09-2022",
+    "Benefits": [
+      "Nutritious Breakfast will be Provided to Primary School Students"
+    ],
+    "Beneficiaries": "Primary School Students of Tamil Nadu",
+    "NodalDepartment": "Department of Social Welfare & Women Empowerment, Tamil Nadu Government",
+    "ModeOfApplication": "No Need to Apply Anywhere for Chief Minister Breakfast Scheme"
+  }
+]

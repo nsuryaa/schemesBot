@@ -9,7 +9,10 @@
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background: white; /* fallback for old browsers */
+  /* background: white; fallback for old browsers */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('/yuriy-kovalev-nN1HSDtKdlw-unsplash.jpg');
 }
 
 .react-chatbot-kit-chat-container {
@@ -26,13 +29,14 @@
   margin-left: 0 !important;
   width: 45% !important;
   font-size: 1rem !important;
+  font-weight: 500 !important;
   padding: 1rem 2rem !important;
   line-height: 2rem !important;
   border-radius: 20px !important; /* Update border radius */
   background-color: #6e00ff !important;
   color: white !important;
   animation: fadeIn 0.5s ease;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 @keyframes fadeIn {
   /* Changed */
@@ -52,7 +56,7 @@
 }
 
 .react-chatbot-kit-user-chat-message-arrow{
-  border-left: 8px solid #b9bec8 !important;
+  border-left: 8px solid rgba(255, 255, 255, 0.5) !important;
 }
 
 /* .react-chatbot-kit-chat-bot-avatar {
@@ -67,10 +71,10 @@
   padding: 1rem 2rem !important;
   line-height: 2rem !important;
   border-radius: 20px !important; /* Update border radius */
-  background-color: #b9bec8 !important;
-  color: white !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  color: #07f !important;
   animation: fadeIn 0.5s ease;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .react-chatbot-kit-chat-header {
@@ -99,6 +103,9 @@
 
 .react-chatbot-kit-chat-message-container {
   height: 530px !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('/yuriy-kovalev-nN1HSDtKdlw-unsplash.jpg');
 }
 
 .react-chatbot-kit-chat-message-container::-webkit-scrollbar {
@@ -163,12 +170,12 @@
   font-family: inherit;
   display: inline-block;
   text-align: center;
-  width: 8em;
+  width: 8.5em;
   padding: 7px 5px;
   overflow: hidden;
   cursor: pointer;
   color: var(--color);
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.65) !important;
   border: 2px solid var(--color);
   border-radius: 30px;
   position: relative;
@@ -273,7 +280,7 @@ ul {
   padding-left: 1rem; /* Add indentation for visual clarity */
   font-weight: lighter; /* Make list items less bold */
 }
-li::before {
+.other-info li::before {
   content: "👉 ";
 }
 
@@ -282,5 +289,32 @@ li::before {
   align-items: start;
 }
 .schemecard-heading{
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.szh-accordion{
+  margin-left: 50px;
+}
+
+.szh-accordion__item-btn{
+  width: 60vw;
+  background-color: #6e00ff;
+  margin-bottom: 3px;
+  border-radius: 10px;
+}
+.szh-accordion__item-panel{
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.65);
+  color: #07f;
+  width: 60vw;
+  font-weight: 500;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+.szh-accordion__item-panel li:before{
+  content: "🔹 ";
+}
+.szh-accordion__item-panel ul{
+  margin-left: 10px;
 }
