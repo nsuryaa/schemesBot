@@ -52,7 +52,7 @@
 }
 
 .react-chatbot-kit-user-chat-message-arrow{
-  border-left: 8px solid #b9bec8;
+  border-left: 8px solid #b9bec8 !important;
 }
 
 /* .react-chatbot-kit-chat-bot-avatar {
@@ -119,6 +119,7 @@
   display: flex;
   gap: 0.5rem;
   margin-left: 4rem;
+  flex-wrap: wrap;
 }
 
 .option-city {
@@ -130,9 +131,10 @@
   cursor: pointer;
   background-color: #0077ff;
   color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .city::before {
@@ -156,12 +158,12 @@
 }
 
 .btn {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   --color: #0077ff;
   font-family: inherit;
   display: inline-block;
   text-align: center;
-  width: 7em;
+  width: 8em;
   padding: 7px 5px;
   overflow: hidden;
   cursor: pointer;
@@ -171,7 +173,11 @@
   border-radius: 30px;
   position: relative;
   transition: all 0.3s ease;
+  height: 75px;
+  font-weight: 600;
 }
+
+
 
 .btn:hover {
   background-color: var(--color);

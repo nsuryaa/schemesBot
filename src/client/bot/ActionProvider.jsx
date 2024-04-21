@@ -45,9 +45,14 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     const scheme = schemesData.find((scheme) =>
       scheme.scheme_details.title_name.toLowerCase().includes(searchTerm)
     );
-    setState((state) => ({ ...state, searchresult: JSON.stringify(scheme) }));
+    let searchresult = scheme
+      ? { ...scheme, isfound: true }
+      : { isfound: false };
     // handleGemini(scheme);
-    const message = createCustomMessage("hi", "SchemeCard", { delay: 3000 });
+    const message = createCustomMessage("hi", "SchemeCard", {
+      delay: 3000,
+      payload: searchresult,
+    });
     updateState(message);
   };
 
@@ -70,14 +75,12 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     - Introduced on: ${scheme.validity_of_the_scheme.introduced_on}\n
     - Valid up to: ${scheme.validity_of_the_scheme.valid_upto}\n`;
 
-
     const result = await model.generateContent(prompt);
     const response = await result.response;
     const text = response.text();
     console.log(text);
     setState((state) => ({ ...state, searchresult: text }));
   };
-  
 
   const handleDb = (state) => {
     fetch("http://localhost:3001/suggest", {

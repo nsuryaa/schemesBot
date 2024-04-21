@@ -20,11 +20,13 @@ export default function Options(props) {
   return (
     <div id="options" className="options-container ">
       <button className="btn" onClick={(event) => Search(event)}>
-        search scheme
+        search <br></br> scheme
       </button>
-      <button className="btn">latest schemes</button>
+      <button className="btn">
+        latest <br></br>schemes
+      </button>
       <button className="btn" onClick={(event) => Suggest(event)}>
-        suggest scheme
+        suggest <br></br> scheme
       </button>
       <button className="btn">FAQ</button>
     </div>

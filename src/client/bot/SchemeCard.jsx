@@ -1,18 +1,18 @@
 import React from "react";
 import Loader from "react-js-loader";
 export default function SchemeCard(props) {
-  let scheme = JSON.parse(props.state.searchresult);
+  let scheme = props.payload;
   // props.scrollIntoView("end");
-  // console.log(props)
+  // console.log(props.payload);
   // let scheme = props.state.searchresult;
   return (
-    <>
-      <div className="scheme-card">
-        <div className="react-chatbot-kit-chat-bot-avatar">
-          <div className="react-chatbot-kit-chat-bot-avatar-container">
-            <p className="react-chatbot-kit-chat-bot-avatar-letter">B</p>
-          </div>
+    <div className="scheme-card">
+      <div className="react-chatbot-kit-chat-bot-avatar">
+        <div className="react-chatbot-kit-chat-bot-avatar-container">
+          <p className="react-chatbot-kit-chat-bot-avatar-letter">B</p>
         </div>
+      </div>
+      {scheme.isfound ? (
         <div className="react-chatbot-kit-chat-bot-message">
           {/* {scheme?scheme:<Loader type="ping-cube" size={60}/>} */}
           <div>
@@ -74,13 +74,17 @@ export default function SchemeCard(props) {
               {scheme.validity_of_the_scheme.valid_upto}
             </p>
           </div>
-          <div
-            className="react-chatbot-kit-chat-bot-message-arrow"
-            style={{ borderRightColor: "rgb(110, 0, 255)" }}
-          ></div>
         </div>
-      </div>
-    </>
+      ) : (
+        <div className="react-chatbot-kit-chat-bot-message">
+          Scheme not found
+        </div>
+      )}
+      <div
+        className="react-chatbot-kit-chat-bot-message-arrow"
+        style={{ borderRightColor: "rgb(110, 0, 255)" }}
+      ></div>
+    </div>
   );
 }
 

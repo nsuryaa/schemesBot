@@ -44,18 +44,20 @@ export default function City(props) {
     // var text = e.options[e.selectedIndex].text;
     console.log(value);
     props.actions.handleEvent(value, botMessage, widget);
+    document.getElementById("city").style.display = "none";
   };
   return (
-    <div className="option-city">
+    <div className="option-city" id="city">
       <select
         id="select"
         name="city"
         className="city"
-        defaultValue="---select one---"
+        defaultValue="select city"
         onChange={(event) => {
           selectValue(event);
         }}
       >
+        <option disabled>select city</option>
         {TamilNadu.map((item, index) => (
           <option className="city" key={index} value={item}>
             {item}
