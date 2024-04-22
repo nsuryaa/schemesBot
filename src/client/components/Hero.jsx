@@ -41,8 +41,8 @@ export default function Hero() {
             <AiOutlineLinkedin size={40} />
           </a> */}
 
-          <button class="hero-button">
-            <span class="hero-button-content">try it now</span>
+          <button className="hero-button">
+            <span className="hero-button-content">try it now</span>
           </button>
         </Link>
       </div>

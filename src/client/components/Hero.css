@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ffff;
+  background-color: #090e14;
 }
 
 @media (min-width: 768px) {
@@ -28,12 +28,12 @@
   font-size: 2.6rem;
   /* font-size: 16px; */
   line-height: 1.4;
-  color: black;
+  color: white;
   font-family: "Ginto Nord", sans-serif;
 }
 .hero-div-p {
   font-size: 1rem;
-  line-height: 1rem;
+  line-height: 2rem;
   padding-top: 25px;
   font-weight: lighter;
 }
@@ -43,6 +43,7 @@
   padding-bottom: 2.5rem;
   justify-content: center;
   align-items: center;
+  text-decoration: none !important;
 }
 .hero-div-a {
   padding-right: 1.25rem;
@@ -68,6 +69,7 @@
   color: #fff;
   border: none;
   cursor: pointer;
+  text-decoration: none !important;
 }
 
 .hero-button:hover::before {

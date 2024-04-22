@@ -2,9 +2,18 @@ header ul li {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-
+.Home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: #090e14;
+  /* fallback for old browsers */
+  background-color: #090e14;
+}
 .landing-page-header {
-  background-color: rgb(85 81 227);
+  /* background-color: rgb(85 81 227); */
 }
 .mobile-nav {
   position: fixed;

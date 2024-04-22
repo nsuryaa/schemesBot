@@ -42,7 +42,8 @@
 }
 
 .OfficialLoginLogo {
-  color: #edeeee;
+  /* color: white !important; */
+  /* background-color: white; */
   justify-self: flex-start;
   cursor: pointer;
   font-size: 2.5rem;
@@ -55,6 +56,9 @@
   margin-left: 2.7rem;
   position: absolute;
   z-index: 999;
+}
+.OfficialLoginLogo a {
+  color: #dadce1;
 }
 
 .OfficialLoginSubtitle {
@@ -186,7 +190,7 @@
 
 .Officialform-labelL {
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   margin-bottom: 1px;
   color: #090e14;
   font-weight: bold;
@@ -210,6 +214,7 @@
   border-left: none;
   border-right: none;
   background: transparent;
+  color: black;
 }
 
 .Officialform-inputL::placeholder {

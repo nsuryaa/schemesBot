@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useCookies } from "react-cookie";
-import "./login.css";
+import "./OfficialLoginElements.css";
+import { Link } from "react-router-dom";
+// import loginsvg from "../assets/login.svg"; // Import SVG directly
+import ReactLogo from "./login.svg?react";
 
 const Login = () => {
   const navigate = useNavigate();
   const [error, setError] = useState(null);
-  const [cookies, setCookie, removeCookie] = useCookies(["access_token"]); // Use useCookies hook to manage cookies
+  const [cookies, setCookie] = useCookies(["access_token"]); // Use useCookies hook to manage cookies
   const handleLogin = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -19,18 +22,14 @@ const Login = () => {
         registerNumber,
         dob,
       });
-      localStorage.setItem("registerNumber", registerNumber);
+
       if (response.data.success) {
-        // Assuming the response contains token and userID
         const { token, userID } = response.data;
 
-        // Set access_token cookie (expires in 1 day)
         setCookie("access_token", token, { path: "/", maxAge: 86400 });
 
-        // Store userID in localStorage
         localStorage.setItem("userID", userID);
 
-        // Redirect to '/profile' after successful login
         navigate("/user-main");
       } else {
         setError("Invalid credentials. Please try again.");
@@ -42,33 +41,50 @@ const Login = () => {
   };
 
   return (
-    <div className="container">
-      <div className="text">
-        <h1>Login Form</h1>
+    <div className="OfficialLoginContainer">
+      <div className="OfficialLoginLeftContainer">
+        <div className="OfficialLoginLogo">
+          <Link to="/">Schemes BOT</Link>
+        </div>
+        {/* <img src={loginsvg} className="Officialform-imgL" alt="login" />{" "} */}
+        <ReactLogo className="Officialform-imgL" />
+        {/* Use the imported SVG */}
       </div>
-      {error && <div className="text">{error}</div>}
-      <br />
-      <br />
-      <form onSubmit={handleLogin}>
-        <div className="form-row">
-          <div className="input-data">
-            <input required type="text" name="registerNumber" />
-            <div className="underline"></div>
-            <label htmlFor="registerNumber">Register Number</label>
+      <div className="OfficialLoginRightContainer">
+        <form className="OfficialLoginForm" onSubmit={handleLogin} noValidate>
+          <div className="OfficialLoginTitle">Log In</div>
+          <div className="OfficialLoginTitleSubTitle">Welcome Back!</div>
+          {error && <p className="OfficialerrorL">{error}</p>}
+
+          <div className="Officialform-inputsL">
+            <label htmlFor="registerNumber" className="Officialform-labelL">
+              Register Number
+            </label>
+            <input
+              className="Officialform-inputL"
+              required
+              type="text"
+              name="registerNumber"
+              placeholder="Enter your register number"
+            />
           </div>
-          <div className="input-data">
-            <input required type="text" name="dob" />
-            <div className="underline"></div>
-            <label htmlFor="dob">Date of Birth (YYYY-MM-DD)</label>
+          <div className="Officialform-inputsL">
+            <label htmlFor="dob" className="Officialform-labelL">
+              Date of Birth(DD-MM-YYYY)
+            </label>
+            <input
+              className="Officialform-inputL"
+              required
+              type="text"
+              name="dob"
+              placeholder="Enter your Date of Birth"
+            />
           </div>
-        </div>
-        <div className="form-row submit-btn">
-          <div className="input-data">
-            <div className="inner"></div>
-            <input type="submit" value="Submit" />
-          </div>
-        </div>
-      </form>
+          <button className="Officialform-input-btnL" type="submit">
+            Login
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

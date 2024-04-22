@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <header className="landing-page-header">
-      <a href="/" className="login-button">
+      <a href="/" className="header-logo">
         Schemes BOT
       </a>
       <nav className="header-nav">
@@ -45,9 +45,9 @@ export default function Header() {
             onClick={() => setToggleMenu(!toggleMenu)}
             className="header-ul-two"
           >
-            <li>
+            {/* <li>
               <a href="/">Home</a>
-            </li>
+            </li> */}
             {/* <li>
               <a href="#about">About</a>
             </li>
@@ -60,6 +60,15 @@ export default function Header() {
             <li>
               <a href="#contact">Contact</a>
             </li> */}
+            <Link to="/" className="login-button">
+              Home
+            </Link>
+            <Link to="/login" className="login-button">
+              Log in
+            </Link>
+            <Link to="/quick-demo" className="login-button">
+              Sign Up
+            </Link>
           </ul>
         </nav>
       )}

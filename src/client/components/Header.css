@@ -10,16 +10,21 @@
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   justify-content: space-between;
-  background-color: #ffffff; /* Add a background color for better visibility */
+  background-color: #090e14;
   z-index: 1000; /* Ensure the header appears above other content */
+  text-decoration: none;
 }
 
 .landing-page-header a {
   font-weight: 700;
-  color: #000000;
+  text-decoration: none !important;
+  /* color: #000000; */
+  /* color: #344bb5; */
 }
+
 .header-nav {
   display: none;
+  /* color: white; */
 }
 
 @media (min-width: 768px) {
@@ -29,7 +34,8 @@
 }
 .header-ul {
   display: flex;
-  color: #ffffff;
+  /* color: rgb(85 81 227); */
+  color: black;
 }
 .header-nav-two {
   display: block;
@@ -42,7 +48,7 @@
 .header-ul-two {
   display: flex;
   flex-direction: column;
-  color: #ffffff;
+  /* color: rgb(85 81 227); */
   position: fixed;
   left: 0;
   top: 2.5rem;
@@ -61,7 +67,7 @@
 }
 .header-icon {
   height: 1.25rem;
-  color: #ffffff;
+  /* color: rgb(85 81 227); */
 }
 
 .login-button {
@@ -70,9 +76,15 @@
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   border-radius: 0.25rem;
-  border-color: #ffffff;
+  /* border-color: rgb(85 81 227); */
   font-weight: 700;
+  color: #ffffff;
 }
 .btn:hover {
   border-width: 1;
+}
+.header-logo {
+  font-size: 25px;
+  color: #9f34f8;
+  text-decoration: none;
 }
