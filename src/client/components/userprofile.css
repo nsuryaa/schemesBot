@@ -1,9 +1,18 @@
+.profile-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #090e14;
+}
+
 .user-profile-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 60px;
-  color: #000; /* Changed text color */
+  background-color: #ffff !important; /* Changed text color */
   border-radius: 10px; /* Increased border-radius for a softer look */
   box-shadow: 2px 2px 4px 6px rgba(0, 0, 0, 0.1); /* Adjusted box-shadow */
   width: 80%; /* Adjusted width for responsiveness */
@@ -15,7 +24,7 @@
   font-size: 2.5rem;
   margin-bottom: 1rem;
   text-align: center;
-  background: -webkit-linear-gradient(
+  /* background: -webkit-linear-gradient(
     right,
     #56d8e4,
     #9f01ea,
@@ -23,13 +32,15 @@
     #9f01ea
   );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+  color: #090e14;
+  font-weight: bolder;
 }
 
 .user-profile-container p {
   font-size: 1rem;
   margin-bottom: 15px;
-  color: #56d8e4;
+  color: #090e14;
 }
 
 .user-profile-container button {

@@ -29,29 +29,33 @@ const UserProfile = () => {
   };
 
   return (
-    <div className="user-profile-container">
-      {userData ? (
-        <div className="profile-name">{userData.name}</div>
-      ) : (
-        <p>Loading user profile...</p>
-      )}
-      {userData && (
-        <>
-          <div className="profile-about">
-            <p>Register Number: {userData.registerNumber}</p>
-            <p>Gender: {userData.gender}</p>
-            <p>Age: {userData.age}</p>
-            <p>City: {userData.city}</p>
-            <p>Community: {userData.community}</p>
-            <p>Differently Abled: {userData.differentlyAbled ? "Yes" : "No"}</p>
-          </div>
-          <div className="user-profile-btn">
-            <button className="follow-btn" onClick={handleLogout}>
-              Logout
-            </button>
-          </div>
-        </>
-      )}
+    <div className="profile-page-container">
+      <div className="user-profile-container">
+        {userData ? (
+          <div className="profile-name">{userData.name}</div>
+        ) : (
+          <p>Loading user profile...</p>
+        )}
+        {userData && (
+          <>
+            <div className="profile-about">
+              <p>Register Number: {userData.registerNumber}</p>
+              <p>Gender: {userData.gender}</p>
+              <p>Age: {userData.age}</p>
+              <p>City: {userData.city}</p>
+              <p>Community: {userData.community}</p>
+              <p>
+                Differently Abled: {userData.differentlyAbled ? "Yes" : "No"}
+              </p>
+            </div>
+            <div className="user-profile-btn">
+              <button className="follow-btn" onClick={handleLogout}>
+                Logout
+              </button>
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 };
