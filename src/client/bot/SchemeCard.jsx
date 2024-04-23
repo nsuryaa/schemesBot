@@ -12,6 +12,7 @@ export default function SchemeCard(props) {
           <p className="react-chatbot-kit-chat-bot-avatar-letter">B</p>
         </div>
       </div>
+
       {scheme.isfound ? (
         <div className="react-chatbot-kit-chat-bot-message">
           {/* {scheme?scheme:<Loader type="ping-cube" size={60}/>} */}
@@ -74,16 +75,22 @@ export default function SchemeCard(props) {
               {scheme.validity_of_the_scheme.valid_upto}
             </p>
           </div>
+          <div
+            className="react-chatbot-kit-chat-bot-message-arrow"
+            style={{ borderRightColor: "rgb(110, 0, 255)" }}
+          ></div>
         </div>
       ) : (
-        <div className="react-chatbot-kit-chat-bot-message">
-          Scheme not found
-        </div>
+        <>
+          <div className="react-chatbot-kit-chat-bot-message">
+            Scheme not found
+            <div
+              className="react-chatbot-kit-chat-bot-message-arrow"
+              style={{ borderRightColor: "rgb(110, 0, 255)" }}
+            ></div>
+          </div>
+        </>
       )}
-      <div
-        className="react-chatbot-kit-chat-bot-message-arrow"
-        style={{ borderRightColor: "rgb(110, 0, 255)" }}
-      ></div>
     </div>
   );
 }

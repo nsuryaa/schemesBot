@@ -67,6 +67,7 @@
   margin-right: 0 !important;
   width: 45% !important;
   font-size: 1rem !important;
+  font-weight: 500;
   padding: 1rem 2rem !important;
   line-height: 2rem !important;
   border-radius: 20px !important; /* Update border radius */
