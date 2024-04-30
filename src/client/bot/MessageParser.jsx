@@ -4,18 +4,18 @@ import React from "react";
 
 const MessageParser = ({ children, actions }) => {
   const parse = (message) => {
+    // console.log(children.props.state.isAge);
     // console.log(typeof +message)
     let age = +message;
-    console.log(typeof age);
-    if (!isNaN(age)) {
-      if (age > 0 && age < 100) {
-        //TODO
-        actions.handleAge(age);
-      } else {
-        let botMessage = "Please,enter a valid age!";
-        actions.handleEvent(null, botMessage);
-      }
-    } else {
+    // console.log(typeof age);
+    if (children.props.state.isAge && age > 0 && age < 100) {
+      actions.handleAge(age);
+      children.props.setState((state) => ({ ...state, isAge: null }));
+    } else if (children.props.state.isAge) {
+      let botMessage = "Please,enter a valid age!";
+      actions.handleEvent(null, botMessage);
+    }
+    if (children.props.state.isSearch) {
       actions.handleSearch(message);
     }
   };

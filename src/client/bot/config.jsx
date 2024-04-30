@@ -8,6 +8,8 @@ import Student from "./Stundent";
 import SchemesList from "./SchemesList";
 import SchemeCard from "./SchemeCard";
 import LatestSchemes from "./LatestSchemes";
+import FAQ from "./FAQ";
+import RestartButton from "./RestartButton";
 const botName = "SchemesBot";
 const config = {
   initialMessages: [
@@ -18,6 +20,7 @@ const config = {
       }
     ),
   ],
+
   // customComponents: {
   //   // Replaces the default header
   //   header: () => (
@@ -59,11 +62,18 @@ const config = {
     community: null,
     differentlyAbled: null,
     category: null,
+    isSearch: null,
+    isAge: null,
   },
   widgets: [
     {
       widgetName: "Options",
-      widgetFunc: (props) => <Options {...props} />,
+      widgetFunc: (props) => (
+        <>
+          <Options {...props} />
+          <RestartButton {...props} />
+        </>
+      ),
     },
     {
       widgetName: "Gender",
@@ -99,6 +109,10 @@ const config = {
       widgetName: "LatestSchemes",
       widgetFunc: (props) => <LatestSchemes {...props} />,
     },
+    {
+      widgetName: "FAQ",
+      widgetFunc: (props) => <FAQ {...props} />,
+    },
   ],
   botName: botName,
   customStyles: {
@@ -109,6 +123,9 @@ const config = {
       backgroundColor: "#5ccc9d",
     },
   },
+  // customComponents: {
+  //   header: (props) => <Header {...props} />,
+  // },
   customMessages: {
     SchemeCard: (props) => <SchemeCard {...props} />,
   },

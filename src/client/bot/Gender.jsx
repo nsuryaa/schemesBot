@@ -6,7 +6,7 @@ export default function Gender(props) {
   // console.log(props);
   const setGender = (event) => {
     let choice = event.target.textContent;
-    props.setState((state) => ({ ...state, gender: choice }));
+    props.setState((state) => ({ ...state, gender: choice, isAge: true }));
     document.getElementById("gender").style.display = "none";
     props.actions.handleEvent(choice, botMessage);
   };

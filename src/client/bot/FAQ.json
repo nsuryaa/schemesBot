@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What can I do with this chatbot?",
+    "answer": "You can use this chatbot to search for specific government schemes by name, receive scheme suggestions based on your details (such as gender, age, community, and work category), and find out about the latest schemes available."
+  },
+  {
+    "question": "How do I search for a specific scheme by name?",
+    "answer": "Simply type the name of the scheme you're interested in, and the chatbot will provide you with detailed information about that scheme."
+  },
+  {
+    "question": "Can I get scheme suggestions based on my details?",
+    "answer": "Yes, you can! Provide your gender, age, community, and work category details when prompted, and the chatbot will recommend relevant schemes for you."
+  },
+  {
+    "question": "How do I access the latest schemes?",
+    "answer": "Choose the option to get the latest schemes from the chatbot's menu, and it will provide you with information about the most recent government schemes available."
+  },
+  {
+    "question": "What kind of details do I need to provide for scheme suggestions?",
+    "answer": "For personalized scheme suggestions, please provide your gender, age, community (if applicable), and your current work category or employment status."
+  },
+  {
+    "question": "How accurate and up-to-date is the information provided by the chatbot?",
+    "answer": "The chatbot is designed to provide accurate and current information based on the latest available data about government schemes. However, it's recommended to verify details from official sources for critical decisions."
+  },
+  {
+    "question": "Can I get information about eligibility criteria for schemes?",
+    "answer": "Yes, the chatbot can provide eligibility criteria for specific schemes upon request."
+  },
+  {
+    "question": "What if I encounter issues or need further assistance?",
+    "answer": "If you have any issues or need additional assistance, feel free to contact our support team [provide contact details or link to support]."
+  },
+  {
+    "question": "Is my personal information safe when interacting with this chatbot?",
+    "answer": "Yes, your privacy and personal information are important to us. We do not store or misuse any personal details provided during interactions."
+  },
+  {
+    "question": "How do I start using the chatbot?",
+    "answer": "Simply begin by selecting one of the available options presented by the chatbot or type your query to get started."
+  }
+]

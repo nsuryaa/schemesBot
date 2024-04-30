@@ -133,35 +133,44 @@ export default function SchemesList(props) {
   }
 
   return (
-    <div>
-      {schemes.map((scheme, index) => (
-        <div className="schemes-section" key={index}>
-          <button
-            className="schemes-title"
-            onClick={() => toggleAccordion(index)}
-          >
-            <h1>{scheme.scheme_details.title_name}</h1>
-            <FontAwesomeIcon icon={faAngleDown} size="2x" />
-          </button>
-          {scheme.isOpen && (
-            <div className="section_container">
-              <div className="schemes-description">{scheme.description}</div>
-              <div className="other-info">
-                <ul>
-                  <li>
-                    Benefits types: {scheme.scheme_details.benefits_types}
-                  </li>
-                  <li>Beneficiaries: {scheme.scheme_details.beneficiaries}</li>
-                  <li>Interactive applications</li>
-                  <li>Portals</li>
-                  <li>Platforms</li>
-                  <li>Scalable backend infrastructure</li>
-                </ul>
+    <>
+      <div>
+        {schemes.map((scheme, index) => (
+          <div className="schemes-section" key={index}>
+            <button
+              className="schemes-title"
+              onClick={() => toggleAccordion(index)}
+            >
+              <h1>{scheme.scheme_details.title_name}</h1>
+              <FontAwesomeIcon icon={faAngleDown} size="2x" />
+            </button>
+            {scheme.isOpen && (
+              <div className="section_container">
+                <div className="schemes-description">{scheme.description}</div>
+                <div className="other-info">
+                  <ul>
+                    <li>
+                      Benefits types: {scheme.scheme_details.benefits_types}
+                    </li>
+                    <li>
+                      Beneficiaries: {scheme.scheme_details.beneficiaries}
+                    </li>
+                    <li>Interactive applications</li>
+                    <li>Portals</li>
+                    <li>Platforms</li>
+                    <li>Scalable backend infrastructure</li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
+            )}
+          </div>
+        ))}
+      </div>
+      {/* <div className="back">
+        <button className="btn" onClick={props.actions.restartConversation}>
+          Back
+        </button>
+      </div> */}
+    </>
   );
 }

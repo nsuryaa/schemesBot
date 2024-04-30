@@ -291,19 +291,35 @@ ul {
   font-size: 1.1em;
 }
 
+.scheme-found{
+  width: 100%;
+}
+
+.subcard {
+  /* width:60% !important; */
+  margin-bottom: 10px;
+}
+.subcard p,
+.react-chatbot-kit-chat-bot-message p {
+  margin-bottom: 5px !important;
+}
+
 .szh-accordion {
   margin-left: 50px;
+  width: fit-content;
+  height: fit-content;
 }
 
 .szh-accordion__item-btn {
   width: 60vw;
+  font-size: 0.7em;
   background-color: #6e00ff;
   margin-bottom: 3px;
   border-radius: 10px;
   font-size: 0.6em;
 }
 .szh-accordion__item-panel {
-  padding: 10px;
+  padding: 10px 20px;
   background-color: rgba(255, 255, 255, 0.65);
   color: #07f;
   width: 60vw;
@@ -314,6 +330,24 @@ ul {
 .szh-accordion__item-panel li:before {
   content: "🔹 ";
 }
-.szh-accordion__item-panel ul {
+/* .szh-accordion__item-panel ul {
   margin-left: 10px;
+} */
+
+/* .back {
+  margin: 10px 0 0 50px;
+} */
+
+.restart-button {
+  position: absolute;
+  top: 7px;
+  left: 225px;
+  z-index: 10;
+  padding: 5px 20px;
+  border: 2px solid #0077ff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.restart-button img {
+  height: 20px;
 }

@@ -13,6 +13,7 @@ export default function Options(props) {
     let value = event.target.textContent;
     let botMessage =
       "Sure! Which government scheme are you interested in? Please provide the scheme name or a brief description.";
+    props.setState((state) => ({ ...state, isSearch: true }));
     props.actions.handleEvent(value, botMessage, null);
     document.getElementById("options").style.display = "none"; //TODO Have to fix
   };
@@ -21,9 +22,17 @@ export default function Options(props) {
     let value = event.target.textContent;
     let botMessage = "Here are some of the latest schemes.";
     let widget = "LatestSchemes";
-    props.actions.handleEvent(value,botMessage, widget);
+    props.actions.handleEvent(value, botMessage, widget);
     document.getElementById("options").style.display = "none";
-  }
+  };
+
+  const faq = (event) => {
+    let value = event.target.textContent;
+    let botMessage = "Here are some of the frequently asked questions";
+    let widget = "FAQ";
+    props.actions.handleEvent(value, botMessage, widget);
+    document.getElementById("options").style.display = "none";
+  };
 
   return (
     <div id="options" className="options-container ">
@@ -36,7 +45,7 @@ export default function Options(props) {
       <button className="btn" onClick={(event) => Suggest(event)}>
         suggest <br></br> scheme
       </button>
-      <button className="btn">FAQ</button>
+      <button className="btn" onClick={(event) => faq(event)}>FAQ</button>
     </div>
   );
 }

@@ -103,6 +103,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   const handleSchemesList2 = (data) => {
     setState((state) => ({ ...state, data: JSON.stringify(data) }));
   };
+
   // const message = createChatBotMessage(
   //   `${data[0].scheme_details.title_name}`
   // );
