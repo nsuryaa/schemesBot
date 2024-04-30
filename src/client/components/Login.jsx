@@ -44,7 +44,7 @@ const Login = () => {
     <div className="OfficialLoginContainer">
       <div className="OfficialLoginLeftContainer">
         <div className="OfficialLoginLogo">
-          <Link to="/">Schemes BOT</Link>
+          <Link to="/">Schemes AI BOT</Link>
         </div>
         {/* <img src={loginsvg} className="Officialform-imgL" alt="login" />{" "} */}
         <ReactLogo className="Officialform-imgL" />

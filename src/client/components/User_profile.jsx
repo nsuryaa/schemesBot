@@ -10,7 +10,9 @@ const UserProfile = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const registerNumber = localStorage.getItem("registerNumber");
+        // const registerNumber = localStorage.getItem("registerNumber");
+        const registerNumber = "813820104109";
+        // console.log(registerNumber);
         const response = await axios.get(
           `http://localhost:3001/api/user/${registerNumber}`
         );

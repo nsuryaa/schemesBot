@@ -10,7 +10,7 @@
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background: black; /* fallback for old browsers */
+  background: rgb(255, 255, 255); /* fallback for old browsers */
 }
 
 .react-chatbot-kit-chat-container {

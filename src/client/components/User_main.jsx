@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./usermain.css";
 import AccordionItem from "./AccordionItem";
+import QRScanner from "./Qrcode.jsx";
 
 const SchemesList = () => {
   // const [schemes, setSchemes] = useState([]);
@@ -94,13 +95,14 @@ const SchemesList = () => {
         <a href="/profile" className="header-logo">
           User Profile
         </a>
+
         <nav className="header-nav">
           <ul className="header-ul">
             <Link to="/profile" className="login-button">
               Profile
             </Link>
-            <Link to="/saved" className="login-button">
-              Saved List
+            <Link to="/qrcode" className="login-button">
+              Qr code
             </Link>
             <button className="login-button" onClick={handleLogout}>
               Logout

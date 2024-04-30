@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header className="landing-page-header">
       <a href="/" className="header-logo">
-        Schemes BOT
+        Schemes AI BOT
       </a>
       <nav className="header-nav">
         <ul className="header-ul">
