@@ -7,7 +7,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #cecece;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
 }
 
 @media (min-width: 768px) {
@@ -18,6 +20,7 @@
 .hero-div {
   display: flex;
   flex-direction: column;
+  font-style: "Open Sans", Roboto, sans-serif;
 }
 @media (min-width: 768px) {
   .hero-div {
@@ -25,17 +28,26 @@
   }
 }
 .hero-div-h1 {
-  font-size: 2.6rem;
+  /* font-size: 2.6rem; */
   /* font-size: 16px; */
-  line-height: 1.4;
+  /* line-height: 1.4; */
   color: rgb(0, 0, 0);
-  font-family: "Ginto Nord", sans-serif;
+  font-family: "Google Sans", Roboto, sans-serif;
+  color: #1f1f1f;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 64px;
+  /* margin: 125px 0 20px; */
 }
 .hero-div-p {
-  font-size: 1rem;
-  line-height: 2rem;
+  font-size: 16px;
+  line-height: 24px;
+  color: #444746;
+  font-weight: 400;
+  letter-spacing: 0;
   padding-top: 25px;
   font-weight: lighter;
+  font-family: "Google Sans", Roboto, sans-serif;
 }
 .hero-div-two {
   display: flex;
@@ -64,9 +76,9 @@
   height: 3rem;
   padding: 0 2rem;
   border-radius: 1.5rem;
-  background: #3d3a4e;
+  background: #a8c7fa;
   background-size: 400%;
-  color: #fff;
+  color: black;
   border: none;
   cursor: pointer;
   text-decoration: none !important;
@@ -79,8 +91,8 @@
 .hero-button-content {
   position: relative;
   z-index: 1;
+  /* color: white; */
 }
-
 .hero-button::before {
   content: "";
   position: absolute;
@@ -91,10 +103,37 @@
   width: 100%;
   height: inherit;
   border-radius: inherit;
-  background: linear-gradient(
+  /* background: linear-gradient(
     82.3deg,
     rgba(150, 93, 233, 1) 10.8%,
     rgba(99, 88, 238, 1) 94.3%
-  );
+  ); */
+  background: #0b57d0;
   transition: all 0.475s;
+}
+.left-logo {
+  /* display: inline-flex;
+  flex-grow: 1;
+  padding: 0 40px; */
+  /* justify-content: right; */
+  position: relative;
+  top: 80px;
+  left: -50px;
+}
+
+@media (max-width: 868px) {
+  .left-logo {
+    /* align-self: center; */
+    top: -30px;
+    left: 0px;
+  }
+  .right-logo {
+    display: none;
+  }
+}
+
+.right-logo {
+  position: relative;
+  top: -110px;
+  left: 50px;
 }

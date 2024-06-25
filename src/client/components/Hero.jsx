@@ -2,6 +2,8 @@
 import "./Hero.css";
 import { Link } from "react-router-dom";
 import React from "react";
+import Right from "./right.svg?react";
+import Left from "./left.svg?react";
 import { useNavigate } from "react-router-dom";
 import {
   // AiOutlineTwitter,
@@ -21,11 +23,13 @@ export default function Hero() {
 
   return (
     <section className="hero-section">
+      <Left className="left-logo" />
+
       <div className="hero-div">
         <h1 className="hero-div-h1">
           {/* Hi, <br />
           This is <span style={{ color: "white" }}>Schemes BOT</span> */}
-          All your schemes's information,
+          All your schemes information,
           <br /> accessible in one message.
           <p className="hero-div-p">{config.subtitle}</p>
         </h1>
@@ -42,10 +46,11 @@ export default function Hero() {
           </a> */}
 
           <button className="hero-button">
-            <span className="hero-button-content">try it now</span>
+            <span className="hero-button-content">Try it now</span>
           </button>
         </Link>
       </div>
+      <Right className="right-logo" />
       {/* <img className="hero-img" src={HeroImg} alt="hero" /> */}
     </section>
   );

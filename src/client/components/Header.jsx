@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header className="landing-page-header">
       <a href="/" className="header-logo">
-        Schemes AI BOT
+        Schemes Bot
       </a>
       <nav className="header-nav">
         <ul className="header-ul">
@@ -28,9 +28,9 @@ export default function Header() {
           <li>
             <a href="#contact">Contact</a>
           </li> */}
-          <Link to="/" className="login-button">
+          {/* <Link to="/" className="login-button">
             Home
-          </Link>
+          </Link> */}
           <Link to="/login" className="login-button">
             Log in
           </Link>
@@ -60,9 +60,9 @@ export default function Header() {
             <li>
               <a href="#contact">Contact</a>
             </li> */}
-            <Link to="/" className="login-button">
+            {/* <Link to="/" className="login-button">
               Home
-            </Link>
+            </Link> */}
             <Link to="/login" className="login-button">
               Log in
             </Link>
